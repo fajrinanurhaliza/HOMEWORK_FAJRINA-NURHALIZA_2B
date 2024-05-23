@@ -60,7 +60,10 @@ def tampilkan_data():
         print(25*'=')
 
 def tampilkan_jumlah_barang():
-    print("==== TAMPILAN JUMLAH BARANG ====")
+    print("==== JUMLAH BARANG ====")
+    total_stok = 0
     for i in barang:
         print(f"{i['name']}: {i['stok']}")
-        print(25*'=')
+        total_stok += i['stok']
+    print(f"\nTotal jumlah barang: {len(barang)}")
+    print(f"Total stok barang: {total_stok}")
